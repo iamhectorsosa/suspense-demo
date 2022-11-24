@@ -1,0 +1,32 @@
+{
+    "root": true,
+    "project": {
+        "name": "ekqt"
+    },
+    "api": {
+        "projectId": "nlorcasg",
+        "dataset": "development"
+    },
+    "plugins": [
+        "@sanity/base",
+        "@sanity/default-layout",
+        "@sanity/default-login",
+        "@sanity/desk-tool",
+        "markdown"
+    ],
+    "env": {
+        "development": {
+            "plugins": ["@sanity/vision"]
+        }
+    },
+    "parts": [
+        {
+            "name": "part:@sanity/base/schema",
+            "path": "./schemas/schema"
+        },
+        {
+            "implements": "part:@sanity/base/document-actions/resolver",
+            "path": "./actions/resolveDocumentActions.js"
+        }
+    ]
+}
