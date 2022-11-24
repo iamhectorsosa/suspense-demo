@@ -7,7 +7,7 @@ export async function signIn() {
             redirectTo:
                 process.env.NODE_ENV === "development"
                     ? "http://localhost:3000/guestbook"
-                    : "http://hectorsosa.me/guestbook",
+                    : "https://hectorsosa.me/guestbook",
         },
     });
 }
