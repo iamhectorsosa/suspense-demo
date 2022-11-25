@@ -18,7 +18,7 @@ export default function Meta({
     baseUrl?: string;
     path?: string;
 }) {
-    const ogImage = `${baseUrl}/api/og?title=${title}&path=${path}`;
+    const ogImage = `${baseUrl}/api/og?title=${encodeURI(title)}&path=${path}`;
     return (
         <>
             <meta
