@@ -6,19 +6,13 @@ export default async function Head({
 }: {
     params: { slug: string };
 }) {
-    const {
-        title,
-        description,
-        imageUrl,
-        slug: path,
-    } = await getPostQueryBySlug(slug);
+    const { title, description, slug: path } = await getPostQueryBySlug(slug);
 
     return (
         <>
             <Meta
                 title={title}
                 description={description}
-                imageUrl={imageUrl}
                 path={`/blog/${path}`}
             />
         </>

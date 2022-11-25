@@ -5,7 +5,6 @@ const defaultMeta = {
         "Software Engineer working as a React/TypeScript Developer at Webscope",
     path: "/",
     baseUrl: process.env.VERCEL_URL ?? "https://hectorsosa.me",
-    imageUrl: "/home.png",
 };
 
 export default function Meta({
@@ -13,13 +12,11 @@ export default function Meta({
     description = defaultMeta.description,
     baseUrl = defaultMeta.baseUrl,
     path = defaultMeta.path,
-    imageUrl = defaultMeta.imageUrl,
 }: {
     title?: string;
     description?: string;
     baseUrl?: string;
     path?: string;
-    imageUrl?: string;
 }) {
     const ogImage = `${baseUrl}/api/og?title=${title}&path=${path}`;
     return (
