@@ -10,20 +10,15 @@ import { loadingState } from "#/lib/delay";
 import toast from "react-hot-toast";
 
 function customToast(message: string, success: boolean) {
-    return toast.custom(
-        () => (
-            <span
-                className={`flex items-center gap-2 rounded-md border border-slate-500 bg-slate-100 py-4 px-8 text-slate-800 shadow transition-colors dark:bg-slate-900 dark:text-slate-100 ${
-                    !success ? "border-red-500 text-red-500" : ""
-                }`}
-            >
-                {message}
-            </span>
-        ),
-        {
-            duration: 100000,
-        }
-    );
+    return toast.custom(() => (
+        <span
+            className={`flex items-center gap-2 rounded-md border border-slate-500 bg-slate-100 py-4 px-8 text-slate-800 shadow transition-colors dark:bg-slate-900 dark:text-slate-100 ${
+                !success ? "border-red-500 text-red-500" : ""
+            }`}
+        >
+            {message}
+        </span>
+    ));
 }
 
 export default function Form() {

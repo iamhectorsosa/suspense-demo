@@ -5,7 +5,7 @@ export const loadingState = null;
 export default function delay(promise: Promise<any>) {
     if (loadingState) {
         return new Promise((resolve) => {
-            setTimeout(resolve, 3000);
+            setTimeout(resolve, 2000);
         }).then(() => promise);
     } else {
         return promise;
