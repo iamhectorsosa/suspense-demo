@@ -21,6 +21,7 @@ export default function Meta({
     path?: string;
     imageUrl?: string;
 }) {
+    const ogImage = `${baseUrl}/api/og?title=${title}&path=${path}`;
     return (
         <>
             <meta
@@ -39,14 +40,14 @@ export default function Meta({
             <meta property="og:url" content={`${baseUrl + path}`} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content={imageUrl} />
+            <meta property="og:image" content={ogImage} />
 
             {/* Twitter*/}
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content={`${baseUrl + path}`} />
             <meta property="twitter:title" content={title} />
             <meta property="twitter:description" content={description} />
-            <meta property="twitter:image" content={imageUrl} />
+            <meta property="twitter:image" content={ogImage} />
         </>
     );
 }
