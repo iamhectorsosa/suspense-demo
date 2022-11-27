@@ -38,7 +38,7 @@ export default async function Post({
                 </div>
             </header>
             <article
-                className="prose:slate prose min-w-full prose-p:text-justify dark:prose-invert"
+                className="prose:slate prose min-w-full dark:prose-invert"
                 dangerouslySetInnerHTML={{ __html: source }}
             />
         </section>

@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export default function Home() {
     return (
         <section>
-            <div className="space-y-3 text-justify leading-relaxed">
+            <div className="space-y-3 leading-relaxed">
                 <h1 className="text-2xl font-bold lg:text-3xl">Welcome!</h1>
                 <p>
                     Thanks for stopping by, my name is Hector and I&apos;m a
@@ -21,7 +21,7 @@ export default function Home() {
                         Next.js 13
                     </Anchor>
                     . The code is open-sourced and available at{" "}
-                    <Anchor href="https:hectorsosa.me/github">GitHub</Anchor>.
+                    <Anchor href="/github">GitHub</Anchor>.
                 </p>
                 <p>
                     Other technologies being used are:{" "}
