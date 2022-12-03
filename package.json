@@ -1,5 +1,5 @@
 {
-    "name": "ekqt",
+    "name": "suspense-demo",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -9,23 +9,17 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@sanity/client": "^3.4.1",
-        "@supabase/supabase-js": "^2.1.0",
-        "@tanstack/react-query": "^4.16.1",
         "@types/node": "18.11.9",
         "@types/react": "18.0.25",
         "@types/react-dom": "18.0.9",
         "@vercel/og": "^0.0.21",
-        "dayjs": "^1.11.6",
         "eslint": "8.28.0",
         "eslint-config-next": "13.0.4",
         "nanoid": "^4.0.0",
         "next": "13.0.4",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "react-hook-form": "^7.39.5",
-        "react-hot-toast": "^2.4.0",
-        "react-icons": "^4.6.0",
+        "react-icons": "^4.7.1",
         "rehype-autolink-headings": "^6.1.1",
         "rehype-prism-plus": "^1.5.0",
         "rehype-slug": "^5.1.0",

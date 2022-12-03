@@ -1,0 +1,18 @@
+Next.js 13 introduced a new file convention, `loading.js`, to help you create meaningful Loading UI with React Suspense. With this convention, you can show an instant loading state from the server while the content of a route segment loads, the new content is automatically swapped in once rendering is complete.
+
+```jsx showLineNumbers
+export default function Loading() {
+    // You can add any UI inside Loading, including a Skeleton.
+    return <LoadingSkeleton />;
+}
+```
+
+In the same folder, `loading.js` will be nested inside `layout.js`. It'll wrap the page.js file and any children below in a `<Suspense>` boundary.
+
+```jsx showLineNumbers
+<Layout>
+    <Suspense fallback={<Loading />}>
+        <Page />
+    </Suspense>
+</Layout>
+```
