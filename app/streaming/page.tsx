@@ -4,6 +4,8 @@ import Card from "./components/Card";
 import Content, { ContentSkeleton } from "./components/Content";
 import Photo, { PhotoSkeleton } from "./components/Photo";
 
+export const dynamic = "force-dynamic";
+
 export default function Page() {
     return (
         <>

@@ -2,6 +2,8 @@ import "#/styles/mdx.css";
 import delay from "#/lib/delay";
 import getMdx from "#/lib/getMdx";
 
+export const dynamic = "force-dynamic";
+
 export default async function Loading() {
     const source = (await delay(getMdx("content", "loading"), 4000)) as string;
     return (

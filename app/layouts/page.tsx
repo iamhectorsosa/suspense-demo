@@ -1,5 +1,7 @@
 import { timeout } from "#/lib/delay";
 
+export const dynamic = "force-dynamic";
+
 export default async function Layouts() {
     await timeout(5000);
     return (

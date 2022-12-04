@@ -2,6 +2,8 @@ import { categories } from "#/lib/config";
 import { timeout } from "#/lib/delay";
 import Card from "./components/Card";
 
+export const dynamic = "force-dynamic";
+
 export default async function Page({
     params: { category },
 }: {
