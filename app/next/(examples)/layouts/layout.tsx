@@ -3,16 +3,14 @@ import Tabs from "./components/Tabs";
 
 export default function Layout({ children }: { children: ReactNode }) {
     return (
-        <>
+        <div className="min-h-[38rem]">
             <header>
-                <h2 className="text-3xl font-bold sm:text-4xl">
+                <h1 className="text-2xl font-bold lg:text-3xl">
                     Nested Layouts
-                </h2>
+                </h1>
             </header>
-            <nav>
-                <Tabs />
-            </nav>
+            <Tabs />
             {children}
-        </>
+        </div>
     );
 }

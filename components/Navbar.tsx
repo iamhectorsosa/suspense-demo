@@ -18,11 +18,11 @@ export default function Navbar({
                 <Link href="/" className="w-fit text-xl font-bold md:text-2xl">
                     <h2>
                         {segment === "/"
-                            ? "Suspense"
+                            ? "Home"
                             : items.find((i) => i.href === segment)?.label}
                     </h2>
                 </Link>
-                <ul className="flex items-center justify-end gap-3">
+                <ul className="flex flex-wrap items-center justify-end gap-3">
                     {items.map(({ label, href }) => (
                         <li
                             key={nanoid()}

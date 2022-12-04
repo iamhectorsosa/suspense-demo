@@ -1,0 +1,18 @@
+Next 13 introduced a new file-system based router built on top of **React Server Components** with support for layouts, nested routing, loading states, error handling, and more. It provides us with a set of special files that you can use in your routes.
+
+```graphql
+# @path: ./app/next/layouts
+├── components
+│   └──Tabs.tsx
+├── head.tsx           # <-- Meta tags
+├── layout.tsx         # <-- Create a shared layout
+├── loading.tsx        # <-- Loading for `/layouts`
+├── page.tsx           # <-- Content for `/layouts`
+│
+├── [category]         # <-- Dynamic segment
+│   └──components
+│     └──Card.tsx
+│   └──head.tsx        # <-- Meta tags
+│   └──loading.tsx     # <-- Loading for `/layouts/[category]`
+│   └──page.tsx        # <-- Content for `/layouts/[category]`
+```

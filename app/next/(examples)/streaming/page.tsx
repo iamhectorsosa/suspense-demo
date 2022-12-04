@@ -1,32 +1,27 @@
-import "#/styles/mdx.css";
 import { Suspense } from "react";
 import Card from "./components/Card";
 import Content, { ContentSkeleton } from "./components/Content";
 import Photo, { PhotoSkeleton } from "./components/Photo";
 
-export const revalidate = 0;
-
-export default function Page() {
+export default function StreamingPage() {
     return (
-        <>
-            <header className="mb-6">
-                <h2 className="text-3xl font-bold sm:text-4xl">
-                    What is Streaming?
-                </h2>
-            </header>
-            <section className="mb-6 grid gap-6 md:grid-cols-[3fr_1fr]">
+        <section className="space-y-4">
+            <h1 className="text-2xl font-bold lg:text-3xl">
+                What is Streaming?
+            </h1>
+            <div className="mb-6 grid gap-6 md:grid-cols-[3fr_1fr]">
                 <Card />
                 <Suspense fallback={<PhotoSkeleton />}>
                     {/* @ts-expect-error Async Server Component */}
                     <Photo />
                 </Suspense>
-            </section>
-            <section>
+            </div>
+            <div>
                 <Suspense fallback={<ContentSkeleton />}>
                     {/* @ts-expect-error Async Server Component */}
                     <Content />
                 </Suspense>
-            </section>
-        </>
+            </div>
+        </section>
     );
 }

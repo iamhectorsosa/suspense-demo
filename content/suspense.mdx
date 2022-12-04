@@ -1,0 +1,49 @@
+> Dealing with lots of things at once is not the same as doing lots of things at once
+
+The most important addition in React 18 is **concurrency**. React uses concurrency as a mechanism that enables our applications to have multiple versions of its UI at the any time.
+
+![Suspense](/images/suspense-1.png)
+
+This gives us the ability to prepare **multiple versions** of a given UI without blocking the _main thread_.
+
+![Suspense](/images/suspense-2.png)
+
+Suspense makes the _"UI loading state"_ a _first-class_ declarative concept in the React programming model.
+
+## So what is Suspense?
+
+_Suspense_ lets you declaratively specify the loading state for a part of the component tree if it's not yet ready to be displayed.
+
+**Only Suspense-enabled data sources will activate the Suspense component**, such as:
+
+-   Lazy-loading component code with lazy (_pre-React 18_)
+-   Data fetching with Suspense-enabled frameworks like Relay, Next.js, Remix
+
+```jsx showLineNumbers
+<div>
+    <Card />
+    <Suspense fallback={<PhotoSkeleton />}>
+        <Photo />
+    </Suspense>
+</div>
+<div>
+    <Suspense fallback={<ContentSkeleton />}>
+        <Content />
+    </Suspense>
+</div>
+```
+
+Conceptually, you can think of Suspense as being similar to a `catch` block. However, instead of catching errors, it catches components "suspending". Any component in the tree can "suspend", which means that it's not ready to render.
+
+## What are the biggest perks of using Suspense with React 18?
+
+-   **Streaming HTML** lets you start emitting HTML as early as you’d like, streaming HTML for additional content together with the `<script>` tags that put them in the right places.
+-   **Selective Hydration** lets you start hydrating your app as early as possible, before the rest of the HTML and the JavaScript code are fully downloaded. It also prioritizes hydrating the parts the user is interacting with, creating an illusion of instant hydration.
+
+These features solve three long-standing problems with SSR in React:
+
+-   You no longer have to wait for all the data to load on the server before sending HTML.
+-   You no longer have to wait for all JavaScript to load to start hydrating.
+-   You no longer have to wait for all components to hydrate to start interacting with the page.
+
+> Suspense serves as an opt-in for all of these features. This demonstrates the power of expressing loading states declaratively.

@@ -6,6 +6,25 @@ export const navItems = [
         href: "/",
     },
     {
+        label: "Suspense",
+        href: "suspense",
+    },
+    {
+        label: "Next 13",
+        href: "next",
+    },
+    {
+        label: "TailwindCSS",
+        href: "tailwind",
+    },
+];
+
+export const nextCategories = [
+    {
+        label: "Home",
+        href: "/",
+    },
+    {
         label: "Loading",
         href: "loading",
     },

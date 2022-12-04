@@ -2,35 +2,30 @@ import { ReactNode } from "react";
 
 export default function Home() {
     return (
-        <section>
-            <div className="space-y-3 leading-relaxed">
-                <header className="mb-6">
-                    <h2 className="text-3xl font-bold sm:text-4xl">
-                        How does Suspense work?
-                    </h2>
-                </header>
-                <article className="space-y-2 text-justify leading-loose">
-                    <p>
-                        If a component suspends, the closest Suspense component
-                        above the suspending component &quot;catches&quot; it,
-                        no matter how many components are in between them. This
-                        lets you safely add and remove Suspense boundaries
-                        according to the granularity of your visual UI design
-                        and without worrying which components exactly might
-                        depend on asynchronous code and data.
-                    </p>
-                    <p>
-                        This project was mainly built to test{" "}
-                        <Anchor href="https://beta.nextjs.org/docs/getting-started">
-                            Next.js 13
-                        </Anchor>
-                        . The code is open-sourced and available at{" "}
-                        <Anchor href="https://hectorsosa.me/github">
-                            GitHub
-                        </Anchor>
-                        .
-                    </p>
-                </article>
+        <section className="space-y-8 py-12 text-center leading-relaxed">
+            <header className="space-y-3">
+                <h2 className="text-4xl font-bold sm:text-6xl">
+                    Understanding Suspense with Next.js
+                </h2>
+                <p className="sm:text-xl">
+                    How to control loading states for your application using{" "}
+                    <Anchor href="https://reactjs.org/blog/2022/03/29/react-v18.html">
+                        React 18
+                    </Anchor>{" "}
+                    and{" "}
+                    <Anchor href="https://beta.nextjs.org/docs/getting-started">
+                        Next 13
+                    </Anchor>
+                    .
+                </p>
+            </header>
+            <div>
+                <p className="py-2 text-xl font-semibold">Today&apos;s menu:</p>
+                <ul className="space-y-2 text-center sm:text-lg">
+                    <li>Suspense and React 18</li>
+                    <li>How to create instant loading states using Next 13?</li>
+                    <li>How to use TailwindCSS for loading UI?</li>
+                </ul>
             </div>
         </section>
     );

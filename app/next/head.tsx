@@ -4,8 +4,9 @@ export default function Head() {
     return (
         <>
             <Meta
-                title="Home"
-                description="Understanding Suspense with Next.js"
+                title="Next 13"
+                description="How to create instant loading states using Next 13?"
+                path="/next"
             />
         </>
     );

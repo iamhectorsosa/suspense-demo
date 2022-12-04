@@ -4,8 +4,9 @@ export default function Head() {
     return (
         <>
             <Meta
-                title="Home"
-                description="Understanding Suspense with Next.js"
+                title="TailwindCSS"
+                description="How to use TailwindCSS for loading UI"
+                path="/tailwind"
             />
         </>
     );

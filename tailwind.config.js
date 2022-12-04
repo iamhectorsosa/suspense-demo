@@ -6,7 +6,30 @@ module.exports = {
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            animation: {
+                pulse: "pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+                fly: "fly 3s cubic-bezier(0.25, 0.75, 0.75, 0.25) infinite",
+            },
+            keyframes: {
+                pulse: {
+                    "0%, 100%": {
+                        opacity: 0,
+                    },
+                    "50%": {
+                        opacity: 1,
+                    },
+                },
+                fly: {
+                    "0%": {
+                        left: "-10%",
+                    },
+                    "75%, 100%": {
+                        left: "110%",
+                    },
+                },
+            },
+        },
     },
     plugins: [require("@tailwindcss/typography")],
 };

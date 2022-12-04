@@ -4,7 +4,7 @@ import getMdx from "#/lib/getMdx";
 import { nanoid } from "nanoid";
 
 async function fetchMdx(slug: string) {
-    await delay(4000);
+    await delay(3000);
     return (await getMdx(slug)) as string;
 }
 
