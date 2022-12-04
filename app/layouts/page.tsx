@@ -1,7 +1,11 @@
 import { timeout } from "#/lib/delay";
 
 export const dynamic = "force-dynamic",
-    revalidate = 0;
+    dynamicParams = true,
+    revalidate = 0,
+    fetchCache = "auto",
+    runtime = "nodejs",
+    preferredRegion = "auto";
 
 export default async function Layouts() {
     await timeout(5000);

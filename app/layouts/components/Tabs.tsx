@@ -24,22 +24,22 @@ export default function Tabs() {
         >
             {categories.map(({ label, href }) => (
                 <li key={nanoid()}>
-                    {/* <button
+                    <button
                         className={`underline underline-offset-4 ${
                             segment === href ? "decoration-transparent" : ""
                         }`}
                         onClick={() => handleTransition(href)}
                     >
                         {label}
-                    </button> */}
-                    <Link
+                    </button>
+                    {/* <Link
                         className={`underline underline-offset-4 ${
                             segment === href ? "decoration-transparent" : ""
                         }`}
                         href={`/layouts/${href}`}
                     >
                         {label}
-                    </Link>
+                    </Link> */}
                 </li>
             ))}
         </ul>
