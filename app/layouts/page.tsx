@@ -1,9 +1,9 @@
-import { timeout } from "#/lib/delay";
+import delay from "#/lib/delay";
 
 export const revalidate = 0;
 
 export default async function Layouts() {
-    await timeout(5000);
+    await delay(5000);
     return (
         <section>
             <div className="space-y-4">

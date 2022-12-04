@@ -8,8 +8,8 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrism from "rehype-prism-plus";
 
-export default async function getMdx(dirPath: string, slug: string) {
-    const source = fs.readFileSync(path.join(dirPath, slug + ".mdx"), "utf8");
+export default async function getMdx(slug: string) {
+    const source = fs.readFileSync(path.join("content", slug + ".mdx"), "utf8");
 
     const { value } = await unified()
         .use(remarkParse)

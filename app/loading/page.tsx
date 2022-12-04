@@ -3,14 +3,15 @@ import delay from "#/lib/delay";
 import getMdx from "#/lib/getMdx";
 
 export const dynamic = "force-dynamic",
-    dynamicParams = true,
-    revalidate = 0,
-    fetchCache = "auto",
-    runtime = "nodejs",
-    preferredRegion = "auto";
+    revalidate = 0;
+
+async function fetchMdx(slug: string) {
+    await delay(4000);
+    return (await getMdx(slug)) as string;
+}
 
 export default async function Loading() {
-    const source = (await delay(getMdx("content", "loading"), 4000)) as string;
+    const source = await fetchMdx("loading");
     return (
         <>
             <header className="mb-6">

@@ -1,7 +1,7 @@
-import { timeout } from "#/lib/delay";
+import delay from "#/lib/delay";
 
 export default async function Photo() {
-    await timeout(4000);
+    await delay(4000);
     return <div className="h-40 rounded-md bg-gray-500 shadow"></div>;
 }
 

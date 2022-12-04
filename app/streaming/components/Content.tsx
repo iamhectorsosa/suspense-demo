@@ -3,11 +3,13 @@ import delay from "#/lib/delay";
 import getMdx from "#/lib/getMdx";
 import { nanoid } from "nanoid";
 
+async function fetchMdx(slug: string) {
+    await delay(4000);
+    return (await getMdx(slug)) as string;
+}
+
 export default async function Content() {
-    const source = (await delay(
-        getMdx("content", "streaming"),
-        2000
-    )) as string;
+    const source = await fetchMdx("streaming");
     return (
         <>
             <article
