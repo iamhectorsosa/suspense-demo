@@ -2,12 +2,7 @@ import { categories } from "#/lib/config";
 import { timeout } from "#/lib/delay";
 import Card from "./components/Card";
 
-export const dynamic = "force-dynamic",
-    dynamicParams = true,
-    revalidate = 0,
-    fetchCache = "auto",
-    runtime = "nodejs",
-    preferredRegion = "auto";
+export const revalidate = 0;
 
 export default async function Page({
     params: { category },

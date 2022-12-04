@@ -4,12 +4,7 @@ import Card from "./components/Card";
 import Content, { ContentSkeleton } from "./components/Content";
 import Photo, { PhotoSkeleton } from "./components/Photo";
 
-export const dynamic = "force-dynamic",
-    dynamicParams = true,
-    revalidate = 0,
-    fetchCache = "auto",
-    runtime = "nodejs",
-    preferredRegion = "auto";
+export const revalidate = 0;
 
 export default function Page() {
     return (
