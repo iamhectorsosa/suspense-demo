@@ -1,4 +1,8 @@
-A **loading** file can create an instant loading state built on [React Suspense](https://beta.reactjs.org/apis/react/Suspense). By default, this file is a **Server Component** and it is placed in the same directory where it will wrap your `page` file and any children below.
+Each folder in a route represents a route segment. Each route segment is mapped to a corresponding segment in a URL path.
+
+![Routing Fundamentals](/images/routing.png)
+
+By default, `loading.tsx` files are **Server Components** (just like all files really). They automatically wrap a page or child layout in a React Suspense boundary, showing your loading component immediately on the first load and when navigating between sibling routes.
 
 ```graphql
 # @path: ./app/next
@@ -9,7 +13,7 @@ A **loading** file can create an instant loading state built on [React Suspense]
 │     └── page.tsx     # <-- Page content for `/next/loading` route
 ```
 
-This doesn't mean that we aren't able to manually defined suspense boundaries. Next 13 abstracts this for us and will continue optimizing this functionality. The directory structure above would translate into the following component hierarchy:
+Next 13 abstracts this for us and will continue optimizing this functionality. This doesn't mean that we aren't able to manually define Suspense boundaries. The directory structure above would translate into the following component hierarchy:
 
 ```jsx
 // @path: ./app/next/loading
@@ -22,7 +26,7 @@ This doesn't mean that we aren't able to manually defined suspense boundaries. N
 </Layout>
 ```
 
-By using these files, you can structure your Suspense boundaries without manually defining them:
+By using these files, you can structure your Suspense boundaries automatically:
 
 ```jsx
 // @path: ./loading/loading.tsx

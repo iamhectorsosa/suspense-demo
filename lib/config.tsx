@@ -29,12 +29,12 @@ export const nextCategories = [
         href: "loading",
     },
     {
-        label: "Layouts",
-        href: "layouts",
-    },
-    {
         label: "Streaming",
         href: "streaming",
+    },
+    {
+        label: "Layouts",
+        href: "layouts",
     },
 ];
 

@@ -1,14 +1,6 @@
-"use client";
-
-import { motion } from "framer-motion";
-
 export default function Card() {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="w-full rounded-md border border-gray-200 p-4 shadow"
-        >
+        <div className="w-full rounded-md border border-gray-200 p-4 shadow">
             <div className="flex space-x-4">
                 <div className="flex-1 space-y-6 py-1">
                     <div className="h-7 w-3/4 rounded bg-gray-500"></div>
@@ -21,7 +13,7 @@ export default function Card() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 

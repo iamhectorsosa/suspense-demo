@@ -1,6 +1,6 @@
-Streaming allows you to incrementally send UI from the server to client, progressively rendering components and pages. This allows part of the content to be displayed faster without waiting for all data fetching and rendering to complete before the UI is rendered.
+Streaming allows you to incrementally send UI from the server to the client, progressively rendering components and pages. This results in part of the content being displayed faster without waiting for all the data fetching and rendering to complete before the user can start interacting with it.
 
-Streaming is particularly beneficial when there's a slow network request for retrieving data. Rather than the entire page being blocked from rendering due to a slow API or database lookup, UI can be incrementally sent to the client so Users don't have to wait for the entire page to load before they can start interacting with it.
+Streaming is particularly beneficial when there's a slow network request for retrieving data since it helps avoid blocking the entire page from rendering due to a slow API or database lookup.
 
 ```jsx showLineNumbers
 <section>
@@ -17,3 +17,7 @@ Streaming is particularly beneficial when there's a slow network request for ret
     </Suspense>
 </section>
 ```
+
+When using _non-streaming server-rendering_, the server is blocked from transferring data back to the client until it has completed rendering the entire page. Once the data is transferred to the client, the page is not interactive until the client-side JavaScript bundle is downloaded and executed.
+
+> You can stream UI in Next.js using loading.js (for an entire route segment) or with Suspense boundaries (for more granular loading UI).
