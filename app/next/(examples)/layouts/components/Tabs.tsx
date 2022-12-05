@@ -1,13 +1,13 @@
 "use client";
 
-import { useSelectedLayoutSegment } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { categories } from "#/lib/config";
 import { nanoid } from "nanoid";
 import Link from "next/link";
 
 export default function Tabs() {
-    let segment = useSelectedLayoutSegment() as string;
-    segment = segment === null ? "/" : segment;
+    let segment = usePathname()?.split("/").at(-1) as string;
+    segment = segment === "layouts" ? "/" : segment;
 
     return (
         <ul className="flex flex-wrap items-center gap-3 py-4">

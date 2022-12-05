@@ -1,18 +1,12 @@
-Next 13 introduced a new file-system based router built on top of **React Server Components** with support for layouts, nested routing, loading states, error handling, and more. It provides us with a set of special files that you can use in your routes.
+The hierarchy of the `app` folder maps directly to URL paths (as long as each of those directories contain a `page.tsx` file). However, it's possible to break out of this pattern by creating a **route group**. These are good for:
 
-```graphql
-# @path: ./app/next/layouts
-├── components
-│   └──Tabs.tsx
-├── head.tsx           # <-- Meta tags
-├── layout.tsx         # <-- Create a shared layout
-├── loading.tsx        # <-- Loading for `/layouts`
-├── page.tsx           # <-- Content for `/layouts`
-│
-├── [category]         # <-- Dynamic segment
-│   └──components
-│     └──Card.tsx
-│   └──head.tsx        # <-- Meta tags
-│   └──loading.tsx     # <-- Loading for `/layouts/[category]`
-│   └──page.tsx        # <-- Content for `/layouts/[category]`
-```
+-   Organizing routes without affecting the URL structure.
+-   Opting-in specific route segments into different layouts, suspense/error boundaries and meta tags.
+-   Creating multiple root layouts by splitting your application.
+
+![Route Groups](/images/route-groups.png)
+
+Good things to know:
+
+-   The naming of route groups has no special meaning other than for organizing. They do not affect the URL path.
+-   Routes inside route groups **should not** resolve to the same URL path. e.g., `(marketing)/about/page.tsx` and `(shop)/about/page.tsx` would both resolve to `/about` and cause an error.

@@ -12,7 +12,7 @@ function LoadingSkeleton() {
             <div className="h-9 w-1/2 rounded-md bg-gray-200 sm:h-10" />
             <article className="space-y-6">
                 <div className="animate-pulse space-y-3">
-                    {createArr(3).map(() => (
+                    {createArr(2).map(() => (
                         <div
                             key={nanoid()}
                             className="h-5 w-full rounded-md bg-gray-200"
@@ -20,7 +20,7 @@ function LoadingSkeleton() {
                     ))}
                 </div>
                 <div className="animate-pulse space-y-3">
-                    {createArr(3).map(() => (
+                    {createArr(4).map(() => (
                         <div
                             key={nanoid()}
                             className="h-5 w-full rounded-md bg-gray-200"
@@ -28,7 +28,7 @@ function LoadingSkeleton() {
                     ))}
                 </div>
                 <div className="animate-pulse space-y-3">
-                    {createArr(3).map(() => (
+                    {createArr(9).map(() => (
                         <div
                             key={nanoid()}
                             className="h-5 w-full rounded-md bg-gray-200"

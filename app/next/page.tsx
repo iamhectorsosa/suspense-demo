@@ -1,7 +1,7 @@
 export default function NextPage() {
     return (
         <section className="space-y-4">
-            <h1 className="text-2xl font-bold lg:text-3xl">Home</h1>
+            <h1 className="text-2xl font-bold lg:text-3xl">What&apos;s new?</h1>
             <p className="prose:slate dark:prose-inver prose min-w-full space-y-2 text-justify">
                 Next 13 introduced new file conventions to help us create
                 meaningful Loading UI with <b>React Suspense</b>. Here is what

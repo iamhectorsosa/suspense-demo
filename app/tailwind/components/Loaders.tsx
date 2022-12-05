@@ -52,8 +52,18 @@ export function FlyLoader() {
         <div className="relative aspect-square w-full rounded-md bg-white shadow-inner">
             <div className="absolute flex h-full w-full flex-col justify-center overflow-hidden">
                 <div className="absolute left-8 h-4 w-4 animate-fly rounded-full bg-gray-500"></div>
-                <div className="animate-delay-100 absolute left-8 h-4 w-4 animate-fly rounded-full bg-gray-500"></div>
-                <div className="animate-delay-200 absolute left-8 h-4 w-4 animate-fly rounded-full bg-gray-500"></div>
+                <div
+                    style={{
+                        animationDelay: "500ms",
+                    }}
+                    className="absolute left-8 h-4 w-4 animate-fly rounded-full bg-gray-500"
+                ></div>
+                <div
+                    style={{
+                        animationDelay: "1000ms",
+                    }}
+                    className="absolute left-8 h-4 w-4 animate-fly rounded-full bg-gray-500"
+                ></div>
             </div>
         </div>
     );

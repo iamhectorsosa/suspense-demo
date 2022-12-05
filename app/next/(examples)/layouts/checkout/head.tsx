@@ -4,9 +4,9 @@ export default function Head() {
     return (
         <>
             <Meta
-                title="Layouts"
+                title="Layouts - Checkout"
                 description="Layouts and Suspense"
-                path="/layouts"
+                path={`/layouts/checkout`}
             />
         </>
     );

@@ -44,16 +44,12 @@ export const categories = [
         href: "/",
     },
     {
-        label: "Category 1",
-        href: "category1",
+        label: "Catalog",
+        href: "catalog",
     },
     {
-        label: "Category 2",
-        href: "category2",
-    },
-    {
-        label: "Category 3",
-        href: "category3",
+        label: "Checkout",
+        href: "checkout",
     },
 ];
 

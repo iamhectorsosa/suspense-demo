@@ -13,7 +13,7 @@ export default async function LayoutsPage() {
         <Motion>
             <section className="space-y-4">
                 <h1 className="text-xl font-bold lg:text-2xl">
-                    Routing Fundamentals
+                    Organize routes without affecting your URL
                 </h1>
                 <article
                     className="prose:slate prose min-w-full text-justify dark:prose-invert"

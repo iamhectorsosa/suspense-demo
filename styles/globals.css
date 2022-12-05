@@ -96,13 +96,6 @@ body a {
     }
 }
 
-.animate-delay-100 {
-    animation-delay: 0.5s;
-}
-.animate-delay-200 {
-    animation-delay: 1s;
-}
-
 .prose h2:has(.anchor),
 .prose h3:has(.anchor),
 .prose h4:has(.anchor) {
