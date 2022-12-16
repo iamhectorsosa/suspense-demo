@@ -3,7 +3,7 @@ import delay from "#/lib/delay";
 import Card from "../components/Card";
 
 export default async function CheckoutPage() {
-    await delay(2000);
+    await delay(5000);
     return (
         <Motion>
             <section>

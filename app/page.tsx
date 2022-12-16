@@ -31,7 +31,7 @@ export default function Home() {
                             <Link href="/suspense">Suspense and React 18</Link>
                         </li>
                         <li>
-                            <Link href="/next">
+                            <Link href="/examples">
                                 Design Patterns for Loading UI in Next 13
                             </Link>
                         </li>

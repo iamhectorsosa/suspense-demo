@@ -6,7 +6,5 @@ export default async function Photo() {
 }
 
 export function PhotoSkeleton() {
-    return (
-        <div className="h-40 animate-pulse rounded-md bg-gray-200 shadow"></div>
-    );
+    return <div className="skeleton h-40 rounded-md shadow"></div>;
 }

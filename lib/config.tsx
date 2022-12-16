@@ -10,8 +10,8 @@ export const navItems = [
         href: "suspense",
     },
     {
-        label: "Next 13",
-        href: "next",
+        label: "Examples",
+        href: "examples",
     },
     {
         label: "TailwindCSS",

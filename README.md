@@ -8,4 +8,4 @@ React 18 lets you use `<Suspense>` to **break down your app into smaller indepen
 
 Feel free to explore this example using the resources below:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ekqt/suspense-demo?file=app/page.tsx&title="Suspense")
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/ekqt/suspense-demo?file=app/page.tsx&title=Suspense)

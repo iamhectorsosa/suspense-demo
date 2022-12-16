@@ -5,18 +5,18 @@ Each folder in a route represents a route segment. Each route segment is mapped 
 By default, `loading.tsx` files are **Server Components** (just like all files really). They automatically wrap a page or child layout in a React Suspense boundary, showing your loading component immediately on the first load and when navigating between sibling routes.
 
 ```graphql
-# @path: ./app/next
-├── page.tsx           # <-- Page content for `/next` route
+# @path: ./app/examples
+├── page.tsx           # <-- Page content for `/examples` route
 ├── (examples)         # <-- Route group
 │   └──loading
 │     └── loading.tsx  # <-- Loading UI
-│     └── page.tsx     # <-- Page content for `/next/loading` route
+│     └── page.tsx     # <-- Page content for `/examples/loading` route
 ```
 
 Next 13 abstracts this for us and will continue optimizing this functionality. This doesn't mean that we aren't able to manually define Suspense boundaries. The directory structure above would translate into the following component hierarchy:
 
 ```jsx
-// @path: ./app/next/loading
+// @path: ./app/examples/loading
 <Layout>
     <Header />
     <Tabs />
